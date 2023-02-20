@@ -23,8 +23,8 @@ header {
   }
 }
 
-body {
-  background-color: #ff96b4;
+.wrapper {
+  height: 100vh;
 }
 
 form {
@@ -50,7 +50,7 @@ form + form {
 button {
   font-size: 1.7rem;
   border-radius: 7px;
-  margin-block: 1rem;
+  margin: 1rem;
 }
 button:active {
   border-color: dodgerblue;

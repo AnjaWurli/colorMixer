@@ -9,29 +9,29 @@
     <title>Color Mixer</title>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <form>
-                <label for="red">r</label>
-                <input type="range" step="1" min="0" max="255" value="255" id="red" />
-            </form>
-            <form>
-                <label for="green">g</label>
-                <input type="range" step="1" min="0" max="255" value="150" id="green" />
-            </form>
-            <form>
-                <label for="blue">b</label>
-                <input type="range" step="1" min="0" max="255" value="180" id="blue" />
-            </form>
-            <button>Random Color</button>
-        </nav>
-        <p>#ff96b4</p>
-    </header>
-    <main></main>
-
-
-    <script src="script.js"></script>
+<body id="app">
+    <div class="wrapper" :style="'background-color: '+rgbToHex">
+        <header>
+            <nav>
+                <form>
+                    <label for="red">r</label>
+                    <input type="range" step="1" min="0" max="255" id="red" v-model="r" />
+                </form>
+                <form>
+                    <label for="green">g</label>
+                    <input type="range" step="1" min="0" max="255" id="green" v-model="g" />
+                </form>
+                <form>
+                    <label for="blue">b</label>
+                    <input type="range" step="1" min="0" max="255" id="blue" v-model="b" />
+                </form>
+                <button @click="randomColor">Random Color</button>
+            </nav>
+            <p>{{rgbToHex}}</p>
+        </header>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
